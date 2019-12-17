@@ -3,7 +3,9 @@ const express = require('express');
 const app = express();
 const bodyParse = require('body-parser');
 const BASE_URL = '/api/v1';
+const cors = require('cors');
 app.use(bodyParse.json());
+app.use(cors());
 
 const swaggerOptions = {
   swaggerDefinition: {
